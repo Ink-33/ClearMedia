@@ -1,3 +1,4 @@
+// Package utils provides some utility functions.
 package utils
 
 import (
@@ -11,7 +12,7 @@ var FFmpegPath string
 
 // GetFileList returns a list of files in a directory
 func GetFileList(dir int) ([]string, error) {
-	var files []string
+	files := make([]string, 0)
 
 	path := os.Args[dir]
 	file, err := os.Open(path)

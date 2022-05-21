@@ -19,5 +19,5 @@ func (f Func) Consume(order order.Order) error {
 
 // NewConsumer returns a ConsumerFunc that calls f(order).
 func NewConsumer(f Func) Consumer {
-	return Func(f)
+	return f
 }
