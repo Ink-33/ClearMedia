@@ -1,3 +1,4 @@
+// Package cmd is the entry point of the application.
 package cmd
 
 import (
