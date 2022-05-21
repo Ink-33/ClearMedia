@@ -2,6 +2,7 @@
 package cmd
 
 import (
+	"fmt"
 	"os"
 
 	"github.com/Ink-33/ClearMedia/internal/factory"
@@ -23,5 +24,6 @@ func Main() error {
 	if err != nil {
 		return err
 	}
+	fmt.Println("Done")
 	return nil
 }

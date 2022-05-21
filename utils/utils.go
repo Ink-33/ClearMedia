@@ -28,7 +28,7 @@ func GetFileList(dir int) ([]string, error) {
 		if list[k].IsDir() {
 			continue
 		}
-		files = append(files, list[k].Name())
+		files = append(files, filepath.Join(path, list[k].Name()))
 	}
 	return files, nil
 }
