@@ -11,8 +11,8 @@ import (
 )
 
 const (
-	// DoAudioStripe is the action number for audioStriper.
-	DoAudioStripe = iota
+	// DoAudioStrip is the action number for audioStriper.
+	DoAudioStrip = iota
 )
 
 // MaxWorkers is the maximum number of workers that can be used.
@@ -23,10 +23,10 @@ func Do(files []string, output string, action int) (err error) {
 	var worker consumer.Consumer
 	var createOrder func(string, string) any
 	switch action {
-	case DoAudioStripe:
+	case DoAudioStrip:
 		worker = consumer.NewConsumer(audioStriper)
 		createOrder = func(name, output string) any {
-			return &order.StripeOrder{Name: name, Output: output}
+			return &order.StripOrder{Name: name, Output: output}
 		}
 	default:
 		return errors.Errorf("unknown action number : %d", action)

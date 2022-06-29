@@ -1,17 +1,17 @@
 package order
 
-// StripeOrder is the order to stripe a file.
-type StripeOrder struct {
+// StripOrder is the order to strip a file.
+type StripOrder struct {
 	Name   string
 	Output string
 }
 
 // GetInput returns the input file name.
-func (o *StripeOrder) GetInput() string {
+func (o *StripOrder) GetInput() string {
 	return o.Name
 }
 
 // GetOutputDir returns the output directory.
-func (o *StripeOrder) GetOutputDir() string {
+func (o *StripOrder) GetOutputDir() string {
 	return o.Output
 }

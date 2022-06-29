@@ -20,7 +20,7 @@ func Main() error {
 	if err != nil {
 		return err
 	}
-	err = factory.Do(infiles, os.Args[outputDir], factory.DoAudioStripe)
+	err = factory.Do(infiles, os.Args[outputDir], factory.DoAudioStrip)
 	if err != nil {
 		return err
 	}
